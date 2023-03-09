@@ -614,9 +614,9 @@ button,
 
 .container {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1322px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 50px;
 }
 
 .btn {
@@ -1273,6 +1273,12 @@ button,
   color: #15ab07;
 }
 
+.header {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
+  background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1314,21 +1320,18 @@ button,
   }
 */
 
-@media (max-width: 1439px) {
-  .container {
-    padding: 0 32px;
-  }
-}
-
 @media (max-width: 1023px) {
   .container {
-    padding: 0 24px;
+    padding: 0 50px;
+    max-width: 1023px;
   }
 }
 
 @media (max-width: 767px) {
   .container {
-    padding: 0 16px;
+    max-width: 767px;
+    padding: 0 25px;
+    min-width: 320px;
   }
 
   .modal__wrapper {
@@ -1342,6 +1345,11 @@ button,
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+
+  .header__logo {
+    width: 35px;
+    height: 35px;
   }
 }
 

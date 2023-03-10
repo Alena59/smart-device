@@ -4,6 +4,26 @@
   min-height: 120px;
   background: $black-pearl-to-bottom;
   color: $color-default-white;
+  z-index: 5;
+
+  @include vp-1024 {
+    position: fixed;
+  }
+
+  @include vp-1023 {
+    min-height: 100px;
+  }
+
+  @include vp-767 {
+    min-height: 70px;
+  }
+}
+
+.header__logo {
+  @include vp-767 {
+    width: 35px;
+    height: 35px;
+  }
 }
 
 .header__container {
@@ -12,6 +32,14 @@
   align-items: center;
   justify-content: space-between;
   column-gap: 5%;
+
+  @include vp-1023 {
+    padding: 20px 50px 25px;
+  }
+
+  @include vp-767 {
+    padding: 15px 25px 20px;
+  }
 }
 
 .header__contacts {
@@ -22,6 +50,11 @@
   row-gap: 10px;
   align-items: center;
   min-width: 450px;
+
+  @include vp-1023 {
+    column-gap: 20px;
+    min-width: auto;
+  }
 }
 
 .header__link {
@@ -30,54 +63,8 @@
   padding: 5px 10px 5px 41px;
   line-height: 18px;
   position: relative;
-}
 
-.header__link-icon {
-  fill: $deep-sky-blue;
-  position: absolute;
-  left: 0;
-}
-
-.header__link-btn {
-  font-size: 14px;
-  line-height: 16px;
-  align-self: center;
-  padding: 10px 15px;
-  background-color: transparent;
-  min-width: 160px;
-  justify-content: center;
-  color: $color-alice-blue;
-  border: 1px solid $color-alice-blue;
-}
-
-@include vp-1024 {
-  header {
-    position: fixed;
-  }
-}
-
-@include vp-767 {
-  .header__container {
-    padding: 15px 25px 20px;
-  }
-
-  .header__logo {
-    width: 35px;
-    height: 35px;
-  }
-}
-
-@include vp-1023 {
-  .header__container {
-    padding: 20px 50px 25px;
-  }
-
-  .header__link span,
-  .header__link-btn {
-    display: none;
-  }
-
-  .header__link {
+  @include vp-1023 {
     padding: 0;
     min-width: 40px;
     min-height: 40px;
@@ -85,13 +72,34 @@
     justify-content: center;
     align-items: center;
   }
+}
 
-  .header__link-icon {
+.header__link-icon {
+  fill: $color-deep-sky-blue;
+  position: absolute;
+  left: 0;
+
+  @include vp-1023 {
     position: static;
   }
+}
 
-  .header__contacts {
-    column-gap: 20px;
-    min-width: auto;
+.header__link-btn {
+  font-size: 14px;
+  line-height: 16px;
+  padding: 10px 15px;
+  background-color: transparent;
+  min-width: 160px;
+  color: $color-alice-blue;
+  border: 1px solid $color-alice-blue;
+
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.header__link span {
+  @include vp-1023 {
+    display: none;
   }
 }

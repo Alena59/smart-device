@@ -1,7 +1,10 @@
 .btn {
   display: inline-flex;
-  padding: 10px 20px;
-
+  flex-wrap: wrap;
+  font-family: $ff-robotocondensed;
+  font-weight: 700;
+  padding: 15px 25px;
+  text-transform: uppercase;
   color: $color-default-white;
 
   background-color: $color-neon-blue;

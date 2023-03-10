@@ -11,32 +11,36 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="container">
+        <div class="header__container container">
           <a class="header__link-logo">
             <picture>
               <source media="(max-width: 767px)" srcset="./img/svg/logo-mob.svg">
               <img class="header__logo" src="./img/svg/logo.svg" width="215" height="55" alt="Smart Device.">
             </picture>
           </a>
-          <nav class="nav">
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a class="nav__link nav__link--email" href="mailto:info@sd.ru">info@sd.ru</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link nav__link--phone" href="tel:84950005252">+7 (495) 000 52 52</a>
-              </li>
-            </ul>
-            <a href="#" class="btn nav__link-btn">Написать</a>
-          </nav>
+          <div class="header__contacts">
+            <a class="header__link header__link--email" href="mailto:info@sd.ru">
+              <svg class="header__link-icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="./img/sprite.svg#email"></use>
+              </svg>
+              <span>info@sd.ru</span>
+            </a>
+            <a class="header__link header__link--phone" href="tel:84950005252">
+              <svg class="header__link-icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="./img/sprite.svg#phone"></use>
+              </svg>
+              <span>+7 (495) 000 52 52</span>
+            </a>
+          </div>
+          <a href="#" class="btn header__link-btn">Заказать звонок</a>
         </div>
       </header>
       <main>
         <h1 class="visually-hidden">Компания Smart Device.</h1>
         <section class="intro">
-          <div class="container">
-            <h2 class="intro__title">Печатные платы</h2>
-            <p class="intro__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+          <div class="intro__container container">
+            <h2>Печатные платы</h2>
+            <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
             <a class="btn intro__link-btn" href="#feedback">Получить бесплатную консультацию</a>
           </div>
         </section>
@@ -157,7 +161,7 @@
             </ul>
           </div>
           <div class="footer__menu">
-            <nav class="nav accordion">
+            <!-- <nav class="nav accordion">
               <h3 class="nav__title">Разделы сайта</h3>
               <ul class="nav__list">
                 <li class="nav__item">
@@ -185,7 +189,7 @@
                 </li>
               </ul>
             </nav>
-          </div>
+          </div> -->
           <section class="address accordion">
             <h3>Наш офис</h3>
             <button class="accordion__btn no-js">

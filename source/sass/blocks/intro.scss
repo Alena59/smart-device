@@ -1,0 +1,33 @@
+.intro {
+  background: $gradient-intro 0 0 no-repeat, url("../img/intro-desk.jpg") no-repeat;
+  background-size: cover;
+  width: 100%;
+  color: $color-alice-blue;
+
+  @include retina {
+    background: $gradient-intro 0 0 no-repeat, url("../img/intro-desk@2x.jpg") no-repeat;
+    background-size: cover;
+  }
+}
+
+.intro__container {
+  padding: 305px 50px 100px;
+  min-height: 880px;
+}
+
+.intro h2 {
+  font-family: $ff-robotocondensed;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin: 0 0 40px 0;
+}
+
+.intro p {
+  font-size: 22px;
+  line-height: 34px;
+  max-width: 685px;
+  margin: 0 0 40px 0;
+}

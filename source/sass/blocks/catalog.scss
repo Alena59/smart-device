@@ -1,0 +1,167 @@
+.catalog {
+  background-color: $color-black-pearl;
+  color: $color-default-white;
+}
+
+.catalog__container {
+  padding: 70px 50px 140px;
+
+  @include vp-1023 {
+    padding: 60px 50px 75px;
+  }
+
+  @include vp-767 {
+    padding: 50px 25px 86px;
+  }
+}
+
+.catalog h2 {
+  font-family: $ff-robotocondensed;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  margin: 0 0 50px 0;
+}
+
+.catalog__link {
+  color: $color-default-white;
+  font-family: $ff-robotocondensed;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.catalog__link p {
+  margin: 0;
+}
+
+.catalog span {
+  &:last-child {
+    display: none;
+
+    @include vp-767 {
+      display: block;
+    }
+  }
+
+  &:first-child {
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.catalog__list {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  margin: 0;
+  grid-template-columns: repeat(3, minmax(200px, 350px));
+  row-gap: 30px;
+  column-gap: 7%;
+
+  @include vp-1023 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.catalog__item {
+  min-height: 650px;
+  padding: 50px 40px;
+
+  @include vp-1023 {
+    min-height: 250px;
+  }
+}
+
+.catalog__item--production {
+  background: url("../img/svg/card-icon.svg") no-repeat bottom right, $gradient-catalog,
+              url("../img/catalog/card-desk1.jpg") center/cover no-repeat;
+
+  @include retina {
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, $gradient-catalog,
+                url("../img/catalog/card-desk1@2x.jpg") center/cover no-repeat;
+  }
+
+  @include vp-1023 {
+    background: url("../img/svg/card-icon.svg") bottom right no-repeat, $gradient-catalog,
+                url("../img/catalog/card-tab1.jpg") center/cover no-repeat;
+
+    @include retina {
+      background: url("../img/svg/card-icon.svg") no-repeat bottom right, $gradient-catalog,
+                  url("../img/catalog/card-tab1@2x.jpg") center/cover no-repeat;
+    }
+  }
+
+  @include vp-767 {
+    background: url("../img/svg/card-icon.svg") bottom right no-repeat, $gradient-catalog,
+                url("../img/catalog/card-mob1.jpg") center/cover no-repeat;
+
+    @include retina {
+      background: url("../img/svg/card-icon.svg") no-repeat bottom right, $gradient-catalog,
+                  url("../img/catalog/card-mob1@2x.jpg") center/cover no-repeat;
+    }
+  }
+}
+
+.catalog__item--mounting {
+  background: url("../img/svg/card-icon.svg") no-repeat bottom right, $gradient-catalog,
+              url("../img/catalog/card-desk2.jpg") center/cover no-repeat;
+
+  @include retina {
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, $gradient-catalog,
+                url("../img/catalog/card-desk2@2x.jpg") center/cover no-repeat;
+  }
+
+  @include vp-1023 {
+    background: url("../img/svg/card-icon.svg") bottom right no-repeat, $gradient-catalog,
+                url("../img/catalog/card-tab2.jpg") center/cover no-repeat;
+
+    @include retina {
+      background: url("../img/svg/card-icon.svg") no-repeat bottom right, $gradient-catalog,
+                  url("../img/catalog/card-tab2@2x.jpg") center/cover no-repeat;
+    }
+  }
+
+  @include vp-767 {
+    background: url("../img/svg/card-icon.svg") bottom right no-repeat, $gradient-catalog,
+                url("../img/catalog/card-mob2.jpg") center/cover no-repeat;
+
+    @include retina {
+      background: url("../img/svg/card-icon.svg") no-repeat bottom right, $gradient-catalog,
+                  url("../img/catalog/card-mob2@2x.jpg") center/cover no-repeat;
+    }
+  }
+}
+
+.catalog__item--components {
+  background: url("../img/svg/card-icon.svg") no-repeat bottom right, $gradient-catalog,
+              url("../img/catalog/card-desk3.jpg") center/cover no-repeat;
+
+  @include retina {
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, $gradient-catalog,
+                url("../img/catalog/card-desk3@2x.jpg") center/cover no-repeat;
+  }
+
+  @include vp-1023 {
+    background: url("../img/svg/card-icon.svg") bottom right no-repeat, $gradient-catalog,
+                url("../img/catalog/card-tab3.jpg") center/cover no-repeat;
+
+    @include retina {
+      background: url("../img/svg/card-icon.svg") no-repeat bottom right, $gradient-catalog,
+                  url("../img/catalog/card-tab3@2x.jpg") center/cover no-repeat;
+    }
+  }
+
+  @include vp-767 {
+    background: url("../img/svg/card-icon.svg") bottom right no-repeat, $gradient-catalog,
+                url("../img/catalog/card-mob3.jpg") center/cover no-repeat;
+
+    @include retina {
+      background: url("../img/svg/card-icon.svg") no-repeat bottom right, $gradient-catalog,
+                  url("../img/catalog/card-mob3@2x.jpg") center/cover no-repeat;
+    }
+  }
+}
+
+

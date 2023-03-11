@@ -634,6 +634,8 @@ button,
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   padding: 15px;
+  border-radius: 3px;
+  letter-spacing: 0.05em;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
@@ -1408,6 +1410,10 @@ button,
 .intro {
   width: 100%;
   color: #F2F5F6;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))) 0 0 no-repeat, url("../img/intro/intro-desk.jpg") 0 0 no-repeat;
+  background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%) 0 0 no-repeat, url("../img/intro/intro-desk.jpg") 0 0 no-repeat;
+  background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%) 0 0 no-repeat, url("../img/intro/intro-desk.jpg") 0 0 no-repeat;
+  background-size: cover;
 }
 
 .intro__container {
@@ -1463,7 +1469,7 @@ button,
 
 .about-company__inner {
   padding-left: 250px;
-  padding-bottom: 18px;
+  padding-bottom: 10px;
   min-height: 320px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1472,8 +1478,9 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  background: url("../img/2022.png") no-repeat left;
+  background: url("../img/2022.png") no-repeat top left;
   background-size: 150px 320px;
+  color: #041827;
 }
 
 .about-company__link-btn {
@@ -1488,6 +1495,76 @@ button,
   color: #00B2FF;
   background-color: transparent;
   border: 1px solid #00B2FF;
+}
+
+.catalog {
+  background-color: #041827;
+  color: #ffffff;
+}
+
+.catalog__container {
+  padding: 70px 50px 140px;
+}
+
+.catalog h2 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  margin: 0 0 50px 0;
+}
+
+.catalog__link {
+  color: #ffffff;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.catalog__link p {
+  margin: 0;
+}
+
+.catalog span:last-child {
+  display: none;
+}
+
+.catalog__list {
+  list-style-type: none;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  margin: 0;
+  -ms-grid-columns: (minmax(200px, 350px))[3];
+  grid-template-columns: repeat(3, minmax(200px, 350px));
+  row-gap: 30px;
+  -webkit-column-gap: 7%;
+  -moz-column-gap: 7%;
+  column-gap: 7%;
+}
+
+.catalog__item {
+  min-height: 650px;
+  padding: 50px 40px;
+}
+
+.catalog__item--production {
+  background: url("../img/svg/card-icon.svg") no-repeat bottom right, -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), url("../img/catalog/card-desk1.jpg") center/cover no-repeat;
+  background: url("../img/svg/card-icon.svg") no-repeat bottom right, -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-desk1.jpg") center/cover no-repeat;
+  background: url("../img/svg/card-icon.svg") no-repeat bottom right, linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-desk1.jpg") center/cover no-repeat;
+}
+
+.catalog__item--mounting {
+  background: url("../img/svg/card-icon.svg") no-repeat bottom right, -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), url("../img/catalog/card-desk2.jpg") center/cover no-repeat;
+  background: url("../img/svg/card-icon.svg") no-repeat bottom right, -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-desk2.jpg") center/cover no-repeat;
+  background: url("../img/svg/card-icon.svg") no-repeat bottom right, linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-desk2.jpg") center/cover no-repeat;
+}
+
+.catalog__item--components {
+  background: url("../img/svg/card-icon.svg") no-repeat bottom right, -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), url("../img/catalog/card-desk3.jpg") center/cover no-repeat;
+  background: url("../img/svg/card-icon.svg") no-repeat bottom right, -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-desk3.jpg") center/cover no-repeat;
+  background: url("../img/svg/card-icon.svg") no-repeat bottom right, linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-desk3.jpg") center/cover no-repeat;
 }
 
 /* @mixin hover-focus {
@@ -1531,43 +1608,9 @@ button,
   }
 */
 
-@media (min-width: 768px) {
-  .intro {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))) 0 0 no-repeat, url("../img/intro/intro-tab.jpg") no-repeat bottom;
-    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%) 0 0 no-repeat, url("../img/intro/intro-tab.jpg") no-repeat bottom;
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%) 0 0 no-repeat, url("../img/intro/intro-tab.jpg") no-repeat bottom;
-    background-size: cover;
-  }
-}
-
-@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (-o-min-device-pixel-ratio: 2/1), (min-width: 768px) and (min-resolution: 2dppx) {
-  .intro {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))) 0 0 no-repeat, url("../img/intro/intro-tab@2x.jpg") no-repeat bottom;
-    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%) 0 0 no-repeat, url("../img/intro/intro-tab@2x.jpg") no-repeat bottom;
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%) 0 0 no-repeat, url("../img/intro/intro-tab@2x.jpg") no-repeat bottom;
-    background-size: cover;
-  }
-}
-
 @media (min-width: 1024px) {
   .header {
     position: fixed;
-  }
-
-  .intro {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))) 0 0 no-repeat, url("../img/intro/intro-desk.jpg") 0 0 no-repeat;
-    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%) 0 0 no-repeat, url("../img/intro/intro-desk.jpg") 0 0 no-repeat;
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%) 0 0 no-repeat, url("../img/intro/intro-desk.jpg") 0 0 no-repeat;
-    background-size: cover;
-  }
-}
-
-@media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1024px) and (-o-min-device-pixel-ratio: 2/1), (min-width: 1024px) and (min-resolution: 2dppx) {
-  .intro {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))) 0 0 no-repeat, url("../img/intro/intro-desk@2x.jpg") 0 0 no-repeat;
-    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%) 0 0 no-repeat, url("../img/intro/intro-desk@2x.jpg") 0 0 no-repeat;
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%) 0 0 no-repeat, url("../img/intro/intro-desk@2x.jpg") 0 0 no-repeat;
-    background-size: cover;
   }
 }
 
@@ -1631,6 +1674,13 @@ button,
     margin-bottom: 10px;
   }
 
+  .intro {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))) 0 0 no-repeat, url("../img/intro/intro-tab.jpg") no-repeat bottom;
+    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%) 0 0 no-repeat, url("../img/intro/intro-tab.jpg") no-repeat bottom;
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%) 0 0 no-repeat, url("../img/intro/intro-tab.jpg") no-repeat bottom;
+    background-size: cover;
+  }
+
   .intro__container {
     margin-top: -15px;
     padding-top: 100px;
@@ -1645,6 +1695,78 @@ button,
 
   .intro__link-btn {
     margin-left: 45px;
+  }
+
+  .about-company__container {
+    padding-bottom: 80px;
+  }
+
+  .about-company p {
+    margin-bottom: 32px;
+  }
+
+  .about-company__inner {
+    padding-left: 163px;
+    min-height: 406px;
+    padding-bottom: 0;
+  }
+
+  .catalog__container {
+    padding: 60px 50px 75px;
+  }
+
+  .catalog__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .catalog__item {
+    min-height: 250px;
+  }
+
+  .catalog__item--production {
+    background: url("../img/svg/card-icon.svg") bottom right no-repeat, -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), url("../img/catalog/card-tab1.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") bottom right no-repeat, -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-tab1.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") bottom right no-repeat, linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-tab1.jpg") center/cover no-repeat;
+  }
+
+  .catalog__item--mounting {
+    background: url("../img/svg/card-icon.svg") bottom right no-repeat, -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), url("../img/catalog/card-tab2.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") bottom right no-repeat, -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-tab2.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") bottom right no-repeat, linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-tab2.jpg") center/cover no-repeat;
+  }
+
+  .catalog__item--components {
+    background: url("../img/svg/card-icon.svg") bottom right no-repeat, -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), url("../img/catalog/card-tab3.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") bottom right no-repeat, -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-tab3.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") bottom right no-repeat, linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-tab3.jpg") center/cover no-repeat;
+  }
+}
+
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1023px) and (min-resolution: 2dppx) {
+  .intro {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))) 0 0 no-repeat, url("../img/intro/intro-tab@2x.jpg") no-repeat bottom;
+    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%) 0 0 no-repeat, url("../img/intro/intro-tab@2x.jpg") no-repeat bottom;
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%) 0 0 no-repeat, url("../img/intro/intro-tab@2x.jpg") no-repeat bottom;
+    background-size: cover;
+  }
+
+  .catalog__item--production {
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), url("../img/catalog/card-tab1@2x.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-tab1@2x.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-tab1@2x.jpg") center/cover no-repeat;
+  }
+
+  .catalog__item--mounting {
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), url("../img/catalog/card-tab2@2x.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-tab2@2x.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-tab2@2x.jpg") center/cover no-repeat;
+  }
+
+  .catalog__item--components {
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), url("../img/catalog/card-tab3@2x.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-tab3@2x.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-tab3@2x.jpg") center/cover no-repeat;
   }
 }
 
@@ -1743,6 +1865,67 @@ button,
   .intro__link-btn-free {
     display: none;
   }
+
+  .about-company__container {
+    padding: 0 25px 80px;
+  }
+
+  .about-company h2 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .about-company p {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 21px;
+  }
+
+  .about-company span {
+    display: none;
+  }
+
+  .about-company__inner {
+    background: none;
+    padding-left: 0;
+    min-height: 305px;
+  }
+
+  .about-company__link-btn {
+    min-width: 160px;
+    line-height: 15px;
+    padding: 8px 15px 12px;
+  }
+
+  .catalog__container {
+    padding: 50px 25px 86px;
+  }
+
+  .catalog span:last-child {
+    display: block;
+  }
+
+  .catalog span:first-child {
+    display: none;
+  }
+
+  .catalog__item--production {
+    background: url("../img/svg/card-icon.svg") bottom right no-repeat, -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), url("../img/catalog/card-mob1.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") bottom right no-repeat, -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-mob1.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") bottom right no-repeat, linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-mob1.jpg") center/cover no-repeat;
+  }
+
+  .catalog__item--mounting {
+    background: url("../img/svg/card-icon.svg") bottom right no-repeat, -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), url("../img/catalog/card-mob2.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") bottom right no-repeat, -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-mob2.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") bottom right no-repeat, linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-mob2.jpg") center/cover no-repeat;
+  }
+
+  .catalog__item--components {
+    background: url("../img/svg/card-icon.svg") bottom right no-repeat, -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), url("../img/catalog/card-mob3.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") bottom right no-repeat, -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-mob3.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") bottom right no-repeat, linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-mob3.jpg") center/cover no-repeat;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1815,6 +1998,24 @@ button,
     background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%) 0 0 no-repeat, url("../img/intro/intro-mob@2x.jpg") no-repeat bottom;
     background-size: cover;
   }
+
+  .catalog__item--production {
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), url("../img/catalog/card-mob1@2x.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-mob1@2x.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-mob1@2x.jpg") center/cover no-repeat;
+  }
+
+  .catalog__item--mounting {
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), url("../img/catalog/card-mob2@2x.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-mob2@2x.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-mob2@2x.jpg") center/cover no-repeat;
+  }
+
+  .catalog__item--components {
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), url("../img/catalog/card-mob3@2x.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-mob3@2x.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-mob3@2x.jpg") center/cover no-repeat;
+  }
 }
 
 @media (hover: hover) {
@@ -1828,5 +2029,32 @@ button,
 
   .custom-select__item:hover:not(.focus-visible) {
     background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
+  .intro {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))) 0 0 no-repeat, url("../img/intro/intro-desk@2x.jpg") 0 0 no-repeat;
+    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%) 0 0 no-repeat, url("../img/intro/intro-desk@2x.jpg") 0 0 no-repeat;
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%) 0 0 no-repeat, url("../img/intro/intro-desk@2x.jpg") 0 0 no-repeat;
+    background-size: cover;
+  }
+
+  .catalog__item--production {
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), url("../img/catalog/card-desk1@2x.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-desk1@2x.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-desk1@2x.jpg") center/cover no-repeat;
+  }
+
+  .catalog__item--mounting {
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), url("../img/catalog/card-desk2@2x.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-desk2@2x.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-desk2@2x.jpg") center/cover no-repeat;
+  }
+
+  .catalog__item--components {
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), url("../img/catalog/card-desk3@2x.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-desk3@2x.jpg") center/cover no-repeat;
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right, linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-desk3@2x.jpg") center/cover no-repeat;
   }
 }

@@ -1,0 +1,53 @@
+.address {
+  max-width: 308px;
+
+  @include vp-767 {
+    max-width: 100%;
+    padding: 0 25px;
+    border-top: 1px solid $color-tory-blue-opacity;
+    border-bottom: 1px solid $color-tory-blue-opacity;
+  }
+}
+
+.address h3 {
+  font-family: $ff-robotocondensed;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  margin: 0 0 20px 0;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  @include vp-767 {
+    margin: 0;
+    padding: 20px 0;
+  }
+}
+
+.address__text {
+  margin: 0;
+  font-style: normal;
+  color: $color-white-opacity-2;
+}
+
+.address__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-style: normal;
+}
+
+.address__link {
+  line-height: 25px;
+  color: $color-white-opacity-2;
+}
+
+
+.address__inner {
+  @include vp-767 {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+}

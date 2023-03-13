@@ -1,0 +1,160 @@
+.feedback {
+  color: $color-default-white;
+  background: $gradient-feedback, $color-deep-sky-blue-2;
+
+  @include vp-1023 {
+    background: $color-deep-sky-blue-2;
+  }
+}
+
+.feedback h2 {
+  font-family: $ff-robotocondensed;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  margin: 0 0 15px 0;
+
+  @include vp-767 {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+.feedback p {
+  margin: 0 0 18px 0;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.feedback input {
+  line-height: 22px;
+  color: $color-default-white;
+  padding: 15px;
+}
+
+.feedback__container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 170px 50px 250px;
+  background: url("../img/paper-airplane.png") no-repeat 6.3% 44.3%;
+
+  @include vp-1219 {
+    background-size: 32%;
+  }
+
+  @include vp-1023 {
+    padding: 50px 50px 130px;
+    background: none;
+    display: block;
+  }
+
+  @include vp-767 {
+    padding: 50px 25px 90px;
+  }
+}
+
+.feedback__inputs-wrapper,
+.feedback__submit-wrapper {
+  display: grid;
+  max-width: 550px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  @include vp-1023 {
+    max-width: 100%;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feedback__inputs-wrapper {
+  border: none;
+  padding: 0;
+  row-gap: 20px;
+  column-gap: 29px;
+  margin: 0 0 35px 0;
+
+  @include vp-767 {
+    margin-bottom: 30px;
+  }
+}
+
+.feedback__inputs-wrapper textarea,
+.feedback__inputs-wrapper input {
+  background-color: $color-black-pearl-opacity-2;
+  border: none;
+  border-radius: 3px;
+
+  &::placeholder {
+    color: $color-default-white;
+  }
+}
+
+.feedback__inputs-wrapper textarea {
+  min-height: 155px;
+  padding: 25px 15px;
+
+  @include vp-767 {
+    grid-column: 180px;
+  }
+}
+
+.feedback__submit-wrapper {
+  row-gap: 20px;
+  column-gap: 50px;
+  align-items: flex-end;
+}
+
+.feedback__inputs-wrapper textarea {
+  grid-column: 1/3;
+
+  @include vp-767 {
+    grid-column: 1/2;
+  }
+}
+
+.feedback__btn {
+  font-family: $ff-robotocondensed;
+  font-weight: 700;
+  line-height: 19px;
+  order: -1;
+  background: $color-black-pearl-2;
+}
+
+.feedback__checkbox {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feedback__checkbox label {
+  padding: 8px 8px 0;
+  display: block;
+  color: $color-white-opacity;
+  font-size: 14px;
+  line-height: 16px;
+  position: relative;
+  padding-left: 27px;
+  min-height: 24px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: 1px solid $color-default-white;
+    border-radius: 2px;
+    left: 0;
+    top: 30%;
+  }
+}
+
+.feedback__checkbox input:checked + label::before {
+  background: url("../img/svg/arrow-checkbox.svg") no-repeat 20% center;
+}

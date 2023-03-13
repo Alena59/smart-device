@@ -12,10 +12,19 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 
 $color-neon-blue:                   #2c39f2;
 $color-torch-red:                   #ff1553;
-$color-alice-blue:                  #F2F5F6;
-$color-deep-sky-blue:               #00B2FF;
-$color-whisper:                     #EBEBEB;
+$color-alice-blue:                  #f2f5f6;
+$color-deep-sky-blue:               #00b2ff;
+$color-whisper:                     #ebebeb;
 $color-black-pearl:                 #041827;
+$color-black-pearl-2:               #041427;
+$color-deep-sky-blue-2:             #00b3ff;
+$color-tory-blue:                   #f8fdff;
+$color-silver:                      #c4c4c4;
+$color-tory-blue-opacity:           rgba($color-tory-blue, 0.7);
+$color-white-opacity:               rgba($color-default-white, 0.8);
+$color-white-opacity-2:             rgba($color-default-white, 0.7);
+$color-black-pearl-opacity:         rgba($color-black-pearl, 0.5);
+$color-black-pearl-opacity-2:       rgba($color-black-pearl-2, 0.15);
 
 // Gradient
 
@@ -23,6 +32,7 @@ $color-black-pearl:                 #041827;
 $black-pearl-to-bottom:                linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
 $gradient-intro:                       linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%);
 $gradient-catalog:                     linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5));
+$gradient-feedback:                    linear-gradient(316.4deg, $color-transparent 65.9%, $color-black-pearl-opacity calc(65.9% + 1px), $color-black-pearl-opacity 100%);
 
 // Typography
 // ---------------------------------
@@ -39,6 +49,7 @@ $fz-default:                        16px;
 
 $tf-default:                        ease;
 $trans-default:                     0.3s $tf-default;
+$trans-default-2:                   0.2s $tf-default;
 
 // если требуется изинг отличный от $tf-default, то переменную называем не цифрой
 $trans-modal:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);
@@ -53,6 +64,7 @@ $vp-767: 767px;
 $vp-768: 768px;
 $vp-1023: 1023px;
 $vp-1024: 1024px;
+$vp-1220: 1220px;
 
 
 // Retina

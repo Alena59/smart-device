@@ -54,8 +54,8 @@
 .catalog__list {
   list-style-type: none;
   padding: 0;
-  display: grid;
   margin: 0;
+  display: grid;
   grid-template-columns: repeat(3, minmax(200px, 350px));
   row-gap: 30px;
   column-gap: 7%;
@@ -75,15 +75,17 @@
 }
 
 .catalog__item--production {
-  background: url("../img/svg/card-icon.svg") no-repeat bottom right, $gradient-catalog,
-              url("../img/catalog/card-desk1.jpg") center/cover no-repeat;
-
-  @include retina {
+  @include vp-1024 {
     background: url("../img/svg/card-icon.svg") no-repeat bottom right, $gradient-catalog,
-                url("../img/catalog/card-desk1@2x.jpg") center/cover no-repeat;
+                url("../img/catalog/card-desk1.jpg") center/cover no-repeat;
+
+    @include retina {
+      background: url("../img/svg/card-icon.svg") no-repeat bottom right, $gradient-catalog,
+                  url("../img/catalog/card-desk1@2x.jpg") center/cover no-repeat;
+    }
   }
 
-  @include vp-1023 {
+  @include vp-768 {
     background: url("../img/svg/card-icon.svg") bottom right no-repeat, $gradient-catalog,
                 url("../img/catalog/card-tab1.jpg") center/cover no-repeat;
 
@@ -94,26 +96,28 @@
   }
 
   @include vp-767 {
-    background: url("../img/svg/card-icon.svg") bottom right no-repeat, $gradient-catalog,
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right/40px 40px, $gradient-catalog,
                 url("../img/catalog/card-mob1.jpg") center/cover no-repeat;
 
     @include retina {
-      background: url("../img/svg/card-icon.svg") no-repeat bottom right, $gradient-catalog,
+      background: url("../img/svg/card-icon.svg") no-repeat bottom right/40px 40px, $gradient-catalog,
                   url("../img/catalog/card-mob1@2x.jpg") center/cover no-repeat;
     }
   }
 }
 
 .catalog__item--mounting {
-  background: url("../img/svg/card-icon.svg") no-repeat bottom right, $gradient-catalog,
-              url("../img/catalog/card-desk2.jpg") center/cover no-repeat;
-
-  @include retina {
+  @include vp-1024 {
     background: url("../img/svg/card-icon.svg") no-repeat bottom right, $gradient-catalog,
+                url("../img/catalog/card-desk2.jpg") center/cover no-repeat;
+
+    @include retina {
+      background: url("../img/svg/card-icon.svg") no-repeat bottom right, $gradient-catalog,
                 url("../img/catalog/card-desk2@2x.jpg") center/cover no-repeat;
+    }
   }
 
-  @include vp-1023 {
+  @include vp-768 {
     background: url("../img/svg/card-icon.svg") bottom right no-repeat, $gradient-catalog,
                 url("../img/catalog/card-tab2.jpg") center/cover no-repeat;
 
@@ -124,26 +128,28 @@
   }
 
   @include vp-767 {
-    background: url("../img/svg/card-icon.svg") bottom right no-repeat, $gradient-catalog,
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right/40px 40px, $gradient-catalog,
                 url("../img/catalog/card-mob2.jpg") center/cover no-repeat;
 
     @include retina {
-      background: url("../img/svg/card-icon.svg") no-repeat bottom right, $gradient-catalog,
+      background: url("../img/svg/card-icon.svg") no-repeat bottom right/40px 40px, $gradient-catalog,
                   url("../img/catalog/card-mob2@2x.jpg") center/cover no-repeat;
     }
   }
 }
 
 .catalog__item--components {
-  background: url("../img/svg/card-icon.svg") no-repeat bottom right, $gradient-catalog,
-              url("../img/catalog/card-desk3.jpg") center/cover no-repeat;
-
-  @include retina {
+  @include vp-1024 {
     background: url("../img/svg/card-icon.svg") no-repeat bottom right, $gradient-catalog,
+                url("../img/catalog/card-desk3.jpg") center/cover no-repeat;
+
+    @include retina {
+      background: url("../img/svg/card-icon.svg") no-repeat bottom right, $gradient-catalog,
                 url("../img/catalog/card-desk3@2x.jpg") center/cover no-repeat;
+    }
   }
 
-  @include vp-1023 {
+  @include vp-768 {
     background: url("../img/svg/card-icon.svg") bottom right no-repeat, $gradient-catalog,
                 url("../img/catalog/card-tab3.jpg") center/cover no-repeat;
 
@@ -154,11 +160,11 @@
   }
 
   @include vp-767 {
-    background: url("../img/svg/card-icon.svg") bottom right no-repeat, $gradient-catalog,
+    background: url("../img/svg/card-icon.svg") no-repeat bottom right/40px 40px, $gradient-catalog,
                 url("../img/catalog/card-mob3.jpg") center/cover no-repeat;
 
     @include retina {
-      background: url("../img/svg/card-icon.svg") no-repeat bottom right, $gradient-catalog,
+      background: url("../img/svg/card-icon.svg") no-repeat bottom right/40px 40px, $gradient-catalog,
                   url("../img/catalog/card-mob3@2x.jpg") center/cover no-repeat;
     }
   }

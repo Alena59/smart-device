@@ -19,7 +19,18 @@
   }
 }
 
+.header__link-logo {
+  cursor: pointer;
+  transition: opacity $trans-default;
+
+    @include hover-focus {
+    opacity: 0.8;
+  }
+}
+
 .header__logo {
+  width: 215px;
+
   @include vp-767 {
     width: 35px;
     height: 35px;
@@ -31,9 +42,9 @@
   padding: 30px 50px 35px;
   align-items: center;
   justify-content: space-between;
-  column-gap: 5%;
 
   @include vp-1023 {
+    align-items: flex-start;
     padding: 20px 50px 25px;
   }
 
@@ -46,23 +57,34 @@
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
-  column-gap: 17%;
+  column-gap: 20.4%;
   row-gap: 10px;
   align-items: center;
-  min-width: 450px;
+  min-width: 490px;
+
+  @include vp-1239 {
+    min-width: 420px;
+    column-gap: 3%;
+  }
 
   @include vp-1023 {
     column-gap: 20px;
     min-width: auto;
+    margin-right: 20px;
+  }
+
+  @include vp-767 {
+    margin-right: 10px;
   }
 }
 
 .header__link {
   display: block;
   color: $color-alice-blue;
-  padding: 5px 10px 5px 41px;
+  padding: 5px 15px 9px 45px;
   line-height: 18px;
   position: relative;
+  transition: opacity $trans-default;
 
   @include vp-1023 {
     padding: 0;
@@ -72,12 +94,21 @@
     justify-content: center;
     align-items: center;
   }
+
+  @include vp-767 {
+    min-height: 30px;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
 }
 
 .header__link-icon {
   fill: $color-deep-sky-blue;
   position: absolute;
-  left: 0;
+  top: 2px;
+  left: 11px;
 
   @include vp-1023 {
     position: static;
@@ -87,9 +118,11 @@
 .header__link-btn {
   font-size: 14px;
   line-height: 16px;
-  padding: 10px 15px;
+  padding: 4px 15px 9px;
   background-color: transparent;
   min-width: 160px;
+  min-height: 40px;
+  margin-right: 61px;
   color: $color-alice-blue;
   border: 1px solid $color-alice-blue;
 

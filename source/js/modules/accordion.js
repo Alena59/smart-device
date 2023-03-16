@@ -1,7 +1,7 @@
 function initAccordion() {
 
   const accBtns = document.querySelectorAll('.accordion__btn');
-  const accTouch = document.querySelectorAll('.accordion__touch-js');
+  const accTouch = document.querySelectorAll('.accordion__wrapper');
   const listLinks = document.querySelectorAll('.accordion__link');
 
   accTouch .forEach((item) => item.classList.remove('no-js'));

@@ -1,5 +1,5 @@
 .address {
-  max-width: 308px;
+  max-width: 345px;
 
   @include vp-767 {
     max-width: 100%;
@@ -28,6 +28,12 @@
   margin: 0;
   font-style: normal;
   color: $color-white-opacity-2;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 10px;
+  }
 }
 
 .address__list {
@@ -40,14 +46,23 @@
 .address__link {
   line-height: 25px;
   color: $color-white-opacity-2;
+  transition: opacity $trans-default;
+
+  @include vp-767 {
+    font-size: 14px;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
 }
 
-
 .address__inner {
+  display: flex;
+  gap: 6px;
+  flex-direction: column;
+
   @include vp-767 {
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
 }

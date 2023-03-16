@@ -3,6 +3,10 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initAccordion} from './modules/accordion';
 import {initScroll}  from './modules/scroll';
+import {toggleContent} from './modules/toggle-content';
+import {openModal, closeModal} from'./modules/modals/modal';
+import {initPhoneMask} from './modules/mask';
+import {validateForm} from './modules/validation';
 
 // ---------------------------------
 
@@ -16,14 +20,17 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
   initAccordion();
   initScroll();
+  toggleContent();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
-    const form = new Form();
-    window.form = form;
-    form.init();
+    openModal();
+    closeModal();
+    initPhoneMask();
+    validateForm();
+    initPhoneInput();
   });
 });
 

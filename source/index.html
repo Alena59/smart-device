@@ -7,17 +7,23 @@
     <meta name="description" content="Компания Smart Device. Печатные платы, производство и монтаж, поставка комплектующих, блоков и модулей.">
     <title>Smart Device</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="./fonts/ptmonoregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/robotocondensedregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/robotocondensedbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/ptmonoregular.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/robotocondensedregular.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/robotocondensedbold.woff" type="font/woff" as="font" crossorigin="anonymous">
   </head>
-  <body>
-    <div class="wrapper">
+  <body id="body">
+    <div class="wrapper" id="wrapper">
       <header class="header">
         <div class="header__container container">
-          <a class="header__link-logo">
+          <a class="header__link-logo" href="index.html">
             <picture>
               <source media="(max-width: 767px)" srcset="./img/svg/logo-mob.svg">
               <img class="header__logo" src="./img/svg/logo.svg" width="215" height="55" alt="Smart Device.">
             </picture>
-          </a>
+            </a>
           <div class="header__contacts">
             <a class="header__link header__link--email" href="mailto:info@sd.ru">
               <svg class="header__link-icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -32,16 +38,21 @@
               <span>+7 (495) 000 52 52</span>
             </a>
           </div>
-          <a href="#" class="btn header__link-btn">Заказать звонок</a>
+          <a class="btn header__link-btn" data-modal="open-modal" href="./modal-no-js.html">Заказать звонок</a>
         </div>
       </header>
       <main>
         <h1 class="visually-hidden">Компания Smart Device.</h1>
         <section class="intro">
           <div class="intro__container container">
-            <h2>Печатные платы</h2>
-            <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-            <a class="btn intro__link-btn" href="#feedback">Получить <span class="intro__link-btn-free">бесплатную</span> консультацию</a>
+            <div class="intro__wrapper">
+              <h2>Печатные платы</h2>
+              <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+              <a class="btn intro__link-btn" href="#feedback">
+                <span class="intro__consultation--desk">Получить бесплатную консультацию</span>
+                <span class="intro__consultation--mob">бесплатная консультация</span>
+              </a>
+            </div>
           </div>
         </section>
         <section class="advantages">
@@ -62,49 +73,58 @@
                 <h3>Крупные поставщики</h3>
                 <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспечивает хорошее качество нашей продукции.</p>
               </li>
-              <li class="advantages__item">
+              <li class="advantages__item advantages__item--conditionality">
                 <svg class="advantages__item-icon" width="35" height="35" viewBox="0 0 35 35" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="./img/sprite.svg#detective"></use>
                 </svg>
                 <h3>Полная конфиденциальность</h3>
-                <p>По желанию клиента  мы обеспечиваем полную конфиденциальность.</p>
+                <p>По желанию клиента &nbsp;мы обеспечиваем полную конфиденциальность.</p>
               </li>
-              <li class="advantages__item">
+              <li class="advantages__item advantages__item--personalization">
                 <svg class="advantages__item-icon" width="35" height="35" viewBox="0 0 35 35" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="./img/sprite.svg#tag"></use>
                 </svg>
                 <h3>Персонализация стоимости</h3>
-                <p>Мы  подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
+                <p>Мы &nbsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
               </li>
             </ul>
           </div>
         </section>
         <section class="about-company">
           <div class="about-company__container container">
-            <div class="about-company__inner">
+            <div class="about-company__wrapper">
               <h2>О компании</h2>
-              <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-              <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.<span>Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома,&nbsp;СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
-              <a class="btn about-company__link-btn">Подробнее</a>
+              <div class="about-company__inner">
+                <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
+                <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.<span class="about-company__text-mob"> Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома,&nbsp;СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
+                <div class="about-company__box no-js">
+                  <p>Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70%&nbsp;из&nbsp;которых&nbsp;продолжают сотрудничество по сей день. На данный момент насчитывается&nbsp;более&nbsp;14&nbsp;офисов&nbsp;по всей стране и 20 городов присутствия.</p>
+                  <p>Мы стремимся к постоянному развитию и повышению уровня качества продукции, производимой&nbsp;внутри&nbsp;компании. Использование инновационных технологий помогает экономить&nbsp;деньги&nbsp;и&nbsp;время наших клиентов</p>
+                </div>
+              </div>
+              <button class="btn about-company__btn no-js">Подробнее</button>
             </div>
           </div>
         </section>
         <section class="catalog">
           <div class="catalog__container container">
-            <h2><span>Smart Device предлагает следующие товары и услуги</span><span>Товары и услуги Smart Device.</span></h2>
+            <h2>
+              <span class="catalog__title-desk">Smart Device предлагает следующие товары и услуги</span>
+              <span class="catalog__title-mob">Товары и услуги<br> Smart Device.</span>
+            </h2>
             <ul class="catalog__list">
-              <li class="catalog__item catalog__item--production">
-                <a class="catalog__link" href="#">
+              <li class="catalog__item">
+                <a class="catalog__link catalog__link--production" href="#">
                   <p>Производство<br> печатных плат</p>
                 </a>
               </li>
-              <li class="catalog__item catalog__item--mounting">
-                <a class="catalog__link" href="#">
-                  <p>Монтаж печатных<br> плат</p>
+              <li class="catalog__item">
+                <a class="catalog__link catalog__link--mounting" href="#">
+                  <p>Монтаж<br class="catalog__line-break"> печатных плат</p>
                 </a>
               </li>
-              <li class="catalog__item catalog__item--components">
-                <a class="catalog__link" href="#">
+              <li class="catalog__item">
+                <a class="catalog__link catalog__link--components" href="#">
                   <p>Комплектующие<br> для светотехники</p>
                 </a>
               </li>
@@ -121,7 +141,8 @@
                   <label for="input-name" class="visually-hidden"></label>
                   <input type="text" name="username" placeholder="Имя" id="input-name" required>
                   <label for="input-phone" class="visually-hidden"></label>
-                  <input type="tel" name="phone" placeholder="Телефон" id="input-phone" required>
+                  <input type="tel" name="phone" placeholder="Телефон" id="input-phone" data-validate-type="phone" required>
+                  <span class="error-message error-message--feedback">Укажите телефон в формате 10 цифр</span>
                   <label for="comment" class="visually-hidden"></label>
                   <textarea name="comment" wrap="soft" placeholder="Ваш вопрос" id="comment"></textarea>
                 </fieldset>
@@ -137,11 +158,10 @@
           </div>
         </section>
       </main>
-
       <footer class="footer">
         <div class="footer__container container">
           <div class="footer__inner">
-            <a class="footer__link-logo">
+            <a class="footer__link-logo" href="index.html">
               <img class="footer__logo" src="./img/svg/logo.svg" width="215" height="55" alt="Smart Device.">
             </a>
             <ul class="footer__social-list social">
@@ -176,7 +196,7 @@
               <button class="accordion__btn no-js">
                 <span class="visually-hidden">Развернуть.</span>
               </button>
-              <div class="nav__wrapper accordion__touch-js no-js">
+              <div class="nav__wrapper accordion__wrapper no-js">
                 <ul class="nav__list">
                   <li class="nav__item">
                     <a class="nav__link accordion__link" href="#">О Компании</a>
@@ -204,52 +224,49 @@
                 </ul>
               </div>
             </nav>
-          <section class="address accordion">
+          <section class="footer__address address accordion">
             <h3>Наш офис</h3>
             <button class="accordion__btn no-js">
               <span class="visually-hidden">Развернуть.</span>
             </button>
-            <address class="address__list accordion__touch-js no-js">
+            <address class="address__list accordion__wrapper no-js">
               <div class="address__inner">
                 <p class="address__text">г. Мытищи, Олимпийский проспект,<br>д.10</p>
-              <a class="address__link accordion__link" href="tel:+74955894050">+7 (495) 589-40-50</a>
-              <a class="address__link accordion__link" href="tel:+79253895829">+7 (925) 389-58-29</a>
-              <a class="address__link accordion__link" href="tel:+79253647813">+7 (925) 364-78-13</a>
+                <a class="address__link accordion__link" href="tel:+74955894050">+7 (495) 589-40-50</a>
+                <a class="address__link accordion__link" href="tel:+79253895829">+7 (925) 389-58-29</a>
+                <a class="address__link accordion__link" href="tel:+79253647813">+7 (925) 364-78-13</a>
               </div>
             </address>
           </section>
         </div>
       </footer>
     </div>
-    <div class="modal modal--preload" data-modal="feedback">
+    <div class="modal modal--preload is-closed" data-modal="feedback">
       <div class="modal__wrapper">
         <div class="modal__content">
           <button class="modal__close-btn" type="button" aria-label="Закрыть попап." data-modal="close-modal" data-close-modal>
           </button>
-          <h3>Закажите звонок</h3>
+          <h2>Закажите звонок</h2>
           <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
           <form action="https://echo.htmlacademy.ru/" method="get" id="modal-form">
             <fieldset>
               <label for="modal-input-name" class="visually-hidden"></label>
-              <input type="text" name="username" placeholder="Имя" id="modal-input-name" required>
+              <input type="text" name="username" placeholder="Имя" id="modal-input-name" autofocus required>
               <label for="modal-input-phone" class="visually-hidden"></label>
-              <input type="tel" name="phone" placeholder="Телефон" id="modal-input-phone" required>
+              <input type="tel" name="phone" placeholder="Телефон" id="modal-input-phone" data-validate-type="phone" required>
+              <span class="error-message">Укажите телефон в формате 10 цифр</span>
               <label for="modal-comment" class="visually-hidden"></label>
               <textarea name="comment" wrap="soft" placeholder="Ваш вопрос" cols="30" rows="7" id="modal-comment"></textarea>
             </fieldset>
             <div class="modal__submit-wrapper">
-              <fieldset>
-                <input class="visually-hidden" type="checkbox" name="modal-agreement" id="modal-agreement" checked
-                  required>
-                <label for="modal-agreement">Я согласен на обработку персональных данных</label>
-              </fieldset>
+              <input class="visually-hidden" type="checkbox" name="modal-agreement" id="modal-agreement" checked required>
+              <label for="modal-agreement">Я согласен на обработку персональных данных</label>
               <button class="modal__submit-btn btn" type="submit">Отправить</button>
             </div>
           </form>
         </div>
       </div>
     </div>
-    <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>
+    <script src="./js/main.min.js" type="module"></script>
   </body>
 </html>

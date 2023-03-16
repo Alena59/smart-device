@@ -4,16 +4,29 @@
   color: $color-white-opacity-2;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   margin: 0;
 
+  @include vp-1023 {
+    &:first-child {
+      margin-bottom: 7px;
+    }
+  }
+
   @include vp-767 {
-    padding-bottom: 20px;
+    &:last-child {
+      padding-bottom: 20px;
+    }
   }
 }
 
 .nav__link {
   color: $color-white-opacity-2;
+  transition: opacity $trans-default;
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
 }
 
 .nav h3 {
@@ -27,7 +40,7 @@
 
   @include vp-767 {
     margin: 0;
-    padding: 20px 0;
+    padding: 22px 0;
   }
 }
 

@@ -2,7 +2,6 @@
   list-style-type: none;
   color: $color-white-opacity-2;
   display: flex;
-  gap: 20px;
   padding: 0;
 }
 
@@ -17,13 +16,9 @@
   min-width: 30px;
   min-height: 30px;
   cursor: pointer;
-  transition: opacity $trans-default-2;
+  transition: opacity $trans-default;
 
   @include hover-focus {
     opacity: 0.7;
   }
-
-  // &:active {
-  //   background: rgba($color-blue-marguerite, 25%);
-  // }
 }

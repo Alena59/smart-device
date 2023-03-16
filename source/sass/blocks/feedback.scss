@@ -7,12 +7,37 @@
   }
 }
 
+.feedback__container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 165px 50px 250px;
+  background: url("../img/paper-airplane.png") no-repeat 6.3% 44.3%;
+
+  @include vp-1219 {
+    background-size: 32%;
+  }
+
+  @include vp-1023 {
+    padding: 46px 50px 128px 50px;
+    background: none;
+    display: block;
+  }
+
+  @include vp-767 {
+    padding: 49px 25px 86px;
+  }
+}
+
 .feedback h2 {
   font-family: $ff-robotocondensed;
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
-  margin: 0 0 15px 0;
+  margin: 0 0 13px 0;
+
+  @include vp-1023 {
+    margin-bottom: 5px;
+  }
 
   @include vp-767 {
     font-size: 30px;
@@ -21,11 +46,16 @@
 }
 
 .feedback p {
-  margin: 0 0 18px 0;
+  margin: 0 0 33px 0;
+
+  @include vp-1023 {
+    margin-bottom: 24px;
+  }
 
   @include vp-767 {
     font-size: 14px;
     line-height: 19px;
+    margin-bottom: 33px;
   }
 }
 
@@ -33,35 +63,21 @@
   line-height: 22px;
   color: $color-default-white;
   padding: 15px;
-}
 
-.feedback__container {
-  display: flex;
-  justify-content: flex-end;
-  padding: 170px 50px 250px;
-  background: url("../img/paper-airplane.png") no-repeat 6.3% 44.3%;
+  transition: opacity $trans-default;
 
-  @include vp-1219 {
-    background-size: 32%;
-  }
-
-  @include vp-1023 {
-    padding: 50px 50px 130px;
-    background: none;
-    display: block;
-  }
-
-  @include vp-767 {
-    padding: 50px 25px 90px;
+  @include hover-focus {
+    opacity: 0.8;
   }
 }
 
 .feedback__inputs-wrapper,
 .feedback__submit-wrapper {
   display: grid;
-  max-width: 550px;
+  max-width: 585px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
+  margin-right: 8px;
 
   @include vp-1023 {
     max-width: 100%;
@@ -73,13 +89,19 @@
 }
 
 .feedback__inputs-wrapper {
+  position: relative;
   border: none;
   padding: 0;
   row-gap: 20px;
   column-gap: 29px;
-  margin: 0 0 35px 0;
+  margin: 0 0 32px 0;
+
+  @include vp-1023 {
+    row-gap: 20px;
+  }
 
   @include vp-767 {
+    row-gap: 18px;
     margin-bottom: 30px;
   }
 }
@@ -89,18 +111,30 @@
   background-color: $color-black-pearl-opacity-2;
   border: none;
   border-radius: 3px;
+  transition: opacity $trans-default;
 
   &::placeholder {
     color: $color-default-white;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
   }
 }
 
 .feedback__inputs-wrapper textarea {
   min-height: 155px;
   padding: 25px 15px;
+  grid-column: 1/3;
+
+  @include vp-1023 {
+    padding: 29px 15px;
+  }
 
   @include vp-767 {
-    grid-column: 180px;
+    grid-column: 1/2;
+    padding: 25px 15px;
+    min-height: 180px;
   }
 }
 
@@ -108,13 +142,14 @@
   row-gap: 20px;
   column-gap: 50px;
   align-items: flex-end;
-}
 
-.feedback__inputs-wrapper textarea {
-  grid-column: 1/3;
+  @include vp-1023 {
+    column-gap: 85px;
+    margin-right: 55px;
+  }
 
   @include vp-767 {
-    grid-column: 1/2;
+     margin-right: 0;
   }
 }
 
@@ -122,6 +157,8 @@
   font-family: $ff-robotocondensed;
   font-weight: 700;
   line-height: 19px;
+  min-height: 45px;
+  padding-bottom: 10px;
   order: -1;
   background: $color-black-pearl-2;
 }
@@ -130,6 +167,11 @@
   border: none;
   padding: 0;
   margin: 0;
+}
+
+.feedback__checkbox input:focus + label {
+  outline: 1px solid $color-default-white;
+  border-radius: 2px;
 }
 
 .feedback__checkbox label {
@@ -141,6 +183,7 @@
   position: relative;
   padding-left: 27px;
   min-height: 24px;
+  cursor: pointer;
 
   &::before {
     position: absolute;
@@ -151,8 +194,17 @@
     border: 1px solid $color-default-white;
     border-radius: 2px;
     left: 0;
-    top: 30%;
+    top: 39%;
+
+    @include vp-767 {
+      top: 37%;
+      left: 5px;
+   }
   }
+
+  @include vp-767 {
+    padding-left: 30px;
+ }
 }
 
 .feedback__checkbox input:checked + label::before {

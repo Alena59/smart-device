@@ -61,9 +61,20 @@
   padding-left: 250px;
   padding-bottom: 10px;
   min-height: 313px;
-  background: url("../img/2022.png") no-repeat top left;
-  background-size: 150px 320px;
+  background: url("../img/2022.png") top left/150px 320px no-repeat;
   color: $color-black-pearl;
+
+  @include vp-1024 {
+    @include retina {
+      background: url("../img/2022@2x.png") no-repeat top left/150px 320px;
+    }
+  }
+
+  @include vp-768 {
+    @include retina {
+      background: url("../img/2022@2x.png") no-repeat top left/150px 320px;
+    }
+  }
 
   @include vp-1023 {
     padding-left: 176px;

@@ -13,9 +13,22 @@
   padding: 165px 50px 250px;
   background: url("../img/paper-airplane.png") no-repeat 6.3% 44.3%;
 
+  @include vp-1220 {
+    @include retina {
+      background: url("../img/paper-airplane@2x.png") no-repeat 6.3% 44.3%/510px 285px;
+    }
+  }
+
+  @include vp-1024 {
+    @include retina {
+      background: url("../img/paper-airplane@2x.png") no-repeat 6.3% 44.3%/32%;
+    }
+  }
+
   @include vp-1219 {
     background-size: 32%;
   }
+
 
   @include vp-1023 {
     padding: 46px 50px 128px 50px;

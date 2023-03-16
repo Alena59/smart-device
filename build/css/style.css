@@ -1217,8 +1217,7 @@ button,
   padding-left: 250px;
   padding-bottom: 10px;
   min-height: 313px;
-  background: url("../img/2022.png") no-repeat top left;
-  background-size: 150px 320px;
+  background: url("../img/2022.png") top left/150px 320px no-repeat;
   color: #041827;
 }
 
@@ -1738,6 +1737,10 @@ button,
     background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/intro/intro-tab@2x.jpg") bottom/cover no-repeat;
   }
 
+  .about-company__wrapper {
+    background: url("../img/2022@2x.png") no-repeat top left/150px 320px;
+  }
+
   .catalog__item--production a {
     background: url("../img/svg/card-icon.svg") no-repeat bottom right, -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), url("../img/catalog/card-tab1@2x.jpg") center/cover no-repeat;
     background: url("../img/svg/card-icon.svg") no-repeat bottom right, -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-tab1@2x.jpg") center/cover no-repeat;
@@ -1794,6 +1797,10 @@ button,
     background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/intro/intro-desk@2x.jpg") left/cover no-repeat;
   }
 
+  .about-company__wrapper {
+    background: url("../img/2022@2x.png") no-repeat top left/150px 320px;
+  }
+
   .catalog__item--production a {
     background: url("../img/svg/card-icon.svg") no-repeat bottom right, -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), url("../img/catalog/card-desk1@2x.jpg") center/cover no-repeat;
     background: url("../img/svg/card-icon.svg") no-repeat bottom right, -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-desk1@2x.jpg") center/cover no-repeat;
@@ -1810,6 +1817,16 @@ button,
     background: url("../img/svg/card-icon.svg") no-repeat bottom right, -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), url("../img/catalog/card-desk3@2x.jpg") center/cover no-repeat;
     background: url("../img/svg/card-icon.svg") no-repeat bottom right, -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-desk3@2x.jpg") center/cover no-repeat;
     background: url("../img/svg/card-icon.svg") no-repeat bottom right, linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), url("../img/catalog/card-desk3@2x.jpg") center/cover no-repeat;
+  }
+
+  .feedback__container {
+    background: url("../img/paper-airplane@2x.png") no-repeat 6.3% 44.3%/32%;
+  }
+}
+
+@media (min-width: 1220px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1220px) and (-o-min-device-pixel-ratio: 2/1), (min-width: 1220px) and (min-resolution: 2dppx) {
+  .feedback__container {
+    background: url("../img/paper-airplane@2x.png") no-repeat 6.3% 44.3%/510px 285px;
   }
 }
 
@@ -1848,7 +1865,7 @@ button,
     -webkit-column-gap: 20px;
     -moz-column-gap: 20px;
     column-gap: 20px;
-    min-width: auto;
+    width: auto;
     margin-right: 20px;
   }
 

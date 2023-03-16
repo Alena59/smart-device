@@ -95,13 +95,13 @@
   }
 }
 
-.intro__consultation--desk {
+.intro__consultation-desk {
   @include vp-767 {
     display: none;
   }
 }
 
-.intro__consultation--mob {
+.intro__consultation-mob {
   display: none;
 
   @include vp-767 {
@@ -130,5 +130,6 @@
     width: 100%;
     padding: 10px 35px;
     min-height: 40px;
+    text-align: center;
   }
 }

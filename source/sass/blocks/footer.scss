@@ -49,6 +49,7 @@
 .footer__social-list {
   margin: 0 0 0 15px;
   gap: 26px;
+  flex-wrap: wrap;
 
   @include vp-1023 {
     margin: 10px 0 0 0;

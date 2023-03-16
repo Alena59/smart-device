@@ -23,7 +23,7 @@
   cursor: pointer;
   transition: opacity $trans-default;
 
-    @include hover-focus {
+  @include hover-focus {
     opacity: 0.8;
   }
 }
@@ -60,11 +60,11 @@
   column-gap: 20.4%;
   row-gap: 10px;
   align-items: center;
-  min-width: 490px;
+  width: 490px;
 
   @include vp-1239 {
-    min-width: 420px;
-    column-gap: 3%;
+    width: 420px;
+    column-gap: 7%;
   }
 
   @include vp-1023 {
@@ -78,7 +78,7 @@
   }
 }
 
-.header__link {
+.header__contacts a {
   display: block;
   color: $color-alice-blue;
   padding: 5px 15px 9px 45px;
@@ -131,7 +131,7 @@
   }
 }
 
-.header__link span {
+.header__contacts span {
   @include vp-1023 {
     display: none;
   }

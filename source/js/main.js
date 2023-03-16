@@ -1,10 +1,9 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import {Form} from './modules/form-validate/form';
 import {initAccordion} from './modules/accordion';
-import {initScroll}  from './modules/scroll';
+import {initScroll} from './modules/scroll';
 import {toggleContent} from './modules/toggle-content';
-import {openModal, closeModal} from'./modules/modals/modal';
+import {openModal, closeModal} from './modules/modals/modal';
 import {initPhoneMask} from './modules/mask';
 import {validateForm} from './modules/validation';
 
@@ -30,7 +29,7 @@ window.addEventListener('DOMContentLoaded', () => {
     closeModal();
     initPhoneMask();
     validateForm();
-    initPhoneInput();
+    initPhoneMask();
   });
 });
 

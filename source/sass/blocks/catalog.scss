@@ -33,16 +33,12 @@
   }
 }
 
-.catalog__link {
+.catalog__item a {
   display: inline-block;
   width: 100%;
   min-height: 650px;
   padding: 50px 40px;
   color: $color-default-white;
-  font-family: $ff-robotocondensed;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
   transition: opacity $trans-default;
 
   @include vp-1023 {
@@ -62,12 +58,21 @@
   }
 }
 
-.catalog__link p {
+.catalog__item h3 {
   margin: 0;
   max-width: 193px;
+  font-weight: 400;
+  font-size: 20px;
+  font-family: $ff-robotocondensed;
+  line-height: 30px;
 
   @include vp-1023 {
     max-width: 290px;
+  }
+
+  @include vp-767 {
+    max-width: 100%;
+    font-size: 18px;
   }
 }
 
@@ -107,7 +112,7 @@
   }
 }
 
-.catalog__link--production {
+.catalog__item--production a {
   @include vp-1024 {
     background: url("../img/svg/card-icon.svg") no-repeat bottom right,
       $gradient-catalog,
@@ -145,7 +150,7 @@
   }
 }
 
-.catalog__link--mounting {
+.catalog__item--mounting a {
   @include vp-1024 {
     background: url("../img/svg/card-icon.svg") no-repeat bottom right,
       $gradient-catalog,
@@ -183,7 +188,7 @@
   }
 }
 
-.catalog__link--components {
+.catalog__item--components a {
   @include vp-1024 {
     background: url("../img/svg/card-icon.svg") no-repeat bottom right,
       $gradient-catalog,

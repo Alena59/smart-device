@@ -24,7 +24,7 @@
   }
 }
 
-.address__text {
+.address__inner p {
   margin: 0;
   font-style: normal;
   color: $color-white-opacity-2;
@@ -43,7 +43,7 @@
   font-style: normal;
 }
 
-.address__link {
+.address__inner a {
   line-height: 25px;
   color: $color-white-opacity-2;
   transition: opacity $trans-default;

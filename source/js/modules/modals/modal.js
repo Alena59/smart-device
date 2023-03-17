@@ -9,16 +9,18 @@ const INTERACTIVE_ELEMENTS = ['button', 'a', 'input', 'textarea', '[tabindex]'];
 const interactiveElementsArr = wrapper.querySelectorAll(INTERACTIVE_ELEMENTS);
 
 function openModal() {
-  openModalBtn.addEventListener('click', function (e) {
-    e.stopPropagation();
-    e.preventDefault();
-    modalContainer.classList.toggle('is-closed');
-    setTimeout(userName.focus(), 2000);
-    body.style.overflow = 'hidden';
-    interactiveElementsArr.forEach((element) => {
-      element.setAttribute('tabindex', '-1');
+  if (openModalBtn && modalContainer && body && userName) {
+    openModalBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      e.preventDefault();
+      modalContainer.classList.toggle('is-closed');
+      setTimeout(userName.focus(), 2000);
+      body.style.overflow = 'hidden';
+      interactiveElementsArr.forEach((element) => {
+        element.setAttribute('tabindex', '-1');
+      });
     });
-  });
+  }
 }
 
 function prepareClosingModal() {
@@ -30,18 +32,20 @@ function prepareClosingModal() {
 }
 
 function closeModal() {
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
-      prepareClosingModal();
-      modalContainer.classList.add('is-closed');
-    }
-  });
+  if (modalContainer && closeModalBtn) {
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        prepareClosingModal();
+        modalContainer.classList.add('is-closed');
+      }
+    });
 
-  document.addEventListener('click', function (e) {
-    if (e.target === modalContainer || e.target === closeModalBtn) {
-      prepareClosingModal();
-    }
-  });
+    document.addEventListener('click', function (e) {
+      if (e.target === modalContainer || e.target === closeModalBtn) {
+        prepareClosingModal();
+      }
+    });
+  }
 }
 
 export {openModal, closeModal};

@@ -4,7 +4,7 @@
   min-height: 120px;
   background: $black-pearl-to-bottom;
   color: $color-default-white;
-  z-index: 5;
+  z-index: 100;
 
   @include vp-1024 {
     position: fixed;

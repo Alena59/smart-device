@@ -10,12 +10,9 @@
     <link rel="preload" href="./fonts/ptmonoregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./fonts/robotocondensedregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./fonts/robotocondensedbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/ptmonoregular.woff" type="font/woff" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/robotocondensedregular.woff" type="font/woff" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/robotocondensedbold.woff" type="font/woff" as="font" crossorigin="anonymous">
   </head>
   <body id="body">
-    <div class="wrapper" id="wrapper">
+    <div class="wrapp" id="wrapper">
       <header class="header">
         <div class="header__container container">
           <a class="header__link-logo" href="index.html">
@@ -113,19 +110,43 @@
               <span class="catalog__title-mob">Товары и услуги<br> Smart Device.</span>
             </h2>
             <ul class="catalog__list">
-              <li class="catalog__item catalog__item--production">
+              <li class="catalog__item">
                 <a href="#">
                   <h3>Производство<br> печатных плат</h3>
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/card-mob1.webp 1x, img/catalog/card-mob1@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog/card-tab1.webp 1x, img/catalog/card-tab1@2x.webp 2x">
+                    <source type="image/webp" srcset="img/catalog/card-desk1.webp 1x, img/catalog/card-desk1@2x.webp 2x">
+                    <source media="(max-width: 767px)" srcset="img/catalog/card-mob1.jpg 1x, img/catalog/card-mob1@2x.jpg 2x">
+                    <source media="(max-width: 1023px)" srcset="img/catalog/card-tab1.jpg 1x, img/catalog/card-tab1@2x.jpg 2x">
+                    <img loading="lazy" src="img/catalog/card-desk1.jpg" srcset="img/catalog/card-desk1@2x.jpg 2x" width="350" height="650" alt="Печатные платы, производство и монтаж, поставка комплектующих, блоков и модулей.">
+                  </picture>
                 </a>
               </li>
-              <li class="catalog__item catalog__item--mounting">
+              <li class="catalog__item">
                 <a href="#">
                   <h3>Монтаж<br class="catalog__line-break"> печатных плат</h3>
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/card-mob2.webp 1x, img/catalog/card-mob2@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog/card-tab2.webp 1x, img/catalog/card-tab2@2x.webp 2x">
+                    <source type="image/webp" srcset="img/catalog/card-desk2.webp 1x, img/catalog/card-desk2@2x.webp 2x">
+                    <source media="(max-width: 767px)" srcset="img/catalog/card-mob2.jpg 1x, img/catalog/card-mob2@2x.jpg 2x">
+                    <source media="(max-width: 1023px)" srcset="img/catalog/card-tab2.jpg 1x, img/catalog/card-tab2@2x.jpg 2x">
+                    <img loading="lazy" src="img/catalog/card-desk2.jpg" srcset="img/catalog/card-desk2@2x.jpg 2x" width="350" height="650" alt="Печатные платы, производство и монтаж, поставка комплектующих, блоков и модулей.">
+                  </picture>
                 </a>
               </li>
-              <li class="catalog__item catalog__item--components">
+              <li class="catalog__item">
                 <a href="#">
                   <h3>Комплектующие<br> для светотехники</h3>
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/card-mob3.webp 1x, img/catalog/card-mob3@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog/card-tab3.webp 1x, img/catalog/card-tab3@2x.webp 2x">
+                    <source type="image/webp" srcset="img/catalog/card-desk3.webp 1x, img/catalog/card-desk3@2x.webp 2x">
+                    <source media="(max-width: 767px)" srcset="img/catalog/card-mob3.jpg 1x, img/catalog/card-mob3@2x.jpg 2x">
+                    <source media="(max-width: 1023px)" srcset="img/catalog/card-tab3.jpg 1x, img/catalog/card-tab3@2x.jpg 2x">
+                    <img loading="lazy" src="img/catalog/card-desk3.jpg" srcset="img/catalog/card-desk3@2x.jpg 2x" width="350" height="650" alt="Печатные платы, производство и монтаж, поставка комплектующих, блоков и модулей.">
+                  </picture>
                 </a>
               </li>
             </ul>
@@ -258,7 +279,7 @@
               <textarea name="comment" wrap="soft" placeholder="Ваш вопрос" cols="30" rows="7" id="modal-comment"></textarea>
             </fieldset>
             <div class="modal__submit-wrapper">
-              <input class="visually-hidden" type="checkbox" name="modal-agreement" id="modal-agreement" checked required>
+              <input class="visually-hidden" type="checkbox" name="modal-agreement" id="modal-agreement" checked>
               <label for="modal-agreement">Я согласен на обработку персональных данных</label>
               <button class="modal__submit-btn btn" type="submit">Отправить</button>
             </div>

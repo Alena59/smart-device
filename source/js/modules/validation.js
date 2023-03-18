@@ -1,5 +1,5 @@
-const username = document.querySelector('.modal [name=username]');
-const phone = document.querySelector('.modal [name=phone]');
+const username = document.querySelector('.modal input[name=username]');
+const phone = document.querySelector('.modal input[name=phone]');
 const modalForm = document.querySelector('#modal-form');
 const checkbox = document.querySelector('#modal-agreement');
 

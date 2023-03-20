@@ -6,7 +6,7 @@
   }
 
   @include vp-767 {
-    padding: 50px 25px 48px;
+    padding: 52px 25px 48px;
   }
 }
 
@@ -82,34 +82,10 @@
   }
 }
 
-.advantages__item--personalization {
-  @include vp-1023 {
-    padding: 88px 35px 30px 39px;
-
-    & h3 {
-      line-height: 33px;
-      margin-bottom: 5px;
-    }
-  }
-
+.advantages__item--height {
   @include vp-767 {
     min-height: 325px;
     padding-top: 76px;
-
-    & h3 {
-      margin-bottom: 17px;
-    }
-  }
-}
-
-.advantages__item--conditionality {
-  @include vp-767 {
-    min-height: 325px;
-    padding-top: 76px;
-
-    & h3 {
-      margin-bottom: 17px;
-    }
   }
 }
 

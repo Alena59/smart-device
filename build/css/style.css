@@ -1597,7 +1597,7 @@ button,
 }
 
 .footer__inner {
-  min-width: 250px;
+  max-width: 250px;
 }
 
 .footer__nav {

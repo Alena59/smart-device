@@ -67,7 +67,7 @@
 }
 
 .footer__inner {
-  min-width: 250px;
+  max-width: 250px;
 
   @include vp-1023 {
     display: flex;

@@ -8,6 +8,22 @@ function hideErrorMessage() {
   errorMessages.forEach((item) => item.classList.remove('is-active'));
 }
 
+let phoneInputs = document.querySelectorAll('[data-validate-type="phone"]');
+
+function initPhoneMask() {
+  if (phoneInputs) {
+    for (let elem of phoneInputs) {
+      for (let ev of ['input', 'blur', 'focus']) {
+        elem.addEventListener(ev, setPhoneMask);
+      }
+    }
+  }
+}
+
+document.addEventListener('click', function () {
+  errorMessages.forEach((item) => item.classList.remove('is-active'));
+});
+
 let setPhoneMask = function (e) {
   if (errorMessages) {
     let el = e.target;
@@ -41,14 +57,4 @@ let setPhoneMask = function (e) {
   }
 };
 
-function initPhoneMask() {
-  let phoneInputs = document.querySelectorAll('[data-validate-type="phone"]');
-  if (phoneInputs) {
-    for (let elem of phoneInputs) {
-      for (let ev of ['input', 'blur', 'focus']) {
-        elem.addEventListener(ev, setPhoneMask);
-      }
-    }
-  }
-}
 export {initPhoneMask};

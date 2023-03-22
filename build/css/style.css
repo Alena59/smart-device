@@ -671,20 +671,18 @@ button,
   padding: 15px;
   border-radius: 3px;
   letter-spacing: 0.05em;
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   text-transform: uppercase;
   color: #ffffff;
   background-color: #2c39f2;
   border: none;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -701,7 +699,7 @@ button,
 
 .modal {
   position: fixed;
-  z-index: 10;
+  z-index: 110;
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -709,6 +707,7 @@ button,
   display: flex;
   top: 0;
   left: 0;
+  overflow-y: auto;
   color: #ffffff;
   background-color: rgba(3, 16, 27, 0.7);
 }
@@ -790,7 +789,7 @@ button,
 }
 
 .modal textarea {
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   padding: 25px 15px 3px;
   background-color: rgba(4, 20, 39, 0.15);
   border: none;
@@ -895,7 +894,7 @@ button,
   width: 100%;
   font-size: 16px;
   line-height: 19px;
-  padding: 14px 10px 12px;
+  padding: 13px 10px;
   margin-bottom: 20px;
   -webkit-box-ordinal-group: 0;
   -ms-flex-order: -1;
@@ -934,6 +933,17 @@ button,
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .header {
@@ -978,9 +988,9 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-column-gap: 20.4%;
@@ -1017,14 +1027,15 @@ button,
 
 .header__link-btn {
   font-size: 14px;
+  margin-bottom: 5px;
   line-height: 16px;
-  padding: 4px 15px 9px;
+  padding: 10px 15px;
   background-color: transparent;
   min-width: 160px;
-  min-height: 40px;
   margin-right: 61px;
   color: #f2f5f6;
   border: 1px solid #f2f5f6;
+  max-width: 200px;
 }
 
 .nav__list {
@@ -1163,7 +1174,7 @@ button,
   font-size: 22px;
   line-height: 34px;
   max-width: 685px;
-  margin: 0 0 44px 0;
+  margin: 0 0 45px 0;
 }
 
 .intro__consultation-mob {
@@ -1176,8 +1187,7 @@ button,
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.05em;
-  padding: 15px 26px;
-  min-height: 55px;
+  padding: 16px 27px;
   color: #f2f5f6;
 }
 
@@ -1264,9 +1274,20 @@ button,
   margin: 0 0 52px 0;
 }
 
+.catalog__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
 .catalog__item a {
   position: relative;
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   width: 100%;
   min-height: 650px;
   padding: 50px 40px;
@@ -1349,7 +1370,7 @@ button,
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding: 165px 50px 250px;
+  padding: 165px 50px 248px;
   background: url("../img/paper-airplane.png") no-repeat 6.3% 44.3%;
 }
 
@@ -1369,6 +1390,7 @@ button,
   line-height: 22px;
   color: #ffffff;
   padding: 15px;
+  background: transparent;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -1470,8 +1492,7 @@ button,
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   line-height: 19px;
-  min-height: 45px;
-  padding-bottom: 10px;
+  padding: 15px 25px;
   -webkit-box-ordinal-group: 0;
   -ms-flex-order: -1;
   order: -1;
@@ -1538,10 +1559,11 @@ button,
 .footer {
   background: #041827;
   color: #ffffff;
+  margin-top: auto;
 }
 
 .footer__container {
-  padding: 52px 50px 55px;
+  padding: 49px 50px 55px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1575,7 +1597,7 @@ button,
 }
 
 .footer__inner {
-  margin-right: 30px;
+  min-width: 250px;
 }
 
 .footer__nav {
@@ -1805,6 +1827,7 @@ button,
   }
 
   .header {
+    position: relative;
     min-height: 100px;
   }
 
@@ -1956,7 +1979,7 @@ button,
   }
 
   .feedback__container {
-    padding: 46px 50px 128px 50px;
+    padding: 46px 50px 122px 50px;
     background: none;
     display: block;
   }
@@ -1989,13 +2012,19 @@ button,
     margin-right: 55px;
   }
 
+  .feedback__checkbox label {
+    padding: 10px 8px 5px 25px;
+  }
+
   .footer__container {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 240px 1fr;
     grid-template-columns: 240px 1fr;
-    -ms-grid-rows: 55px 1fr;
-    grid-template-rows: 55px 1fr;
+    -ms-grid-rows: -webkit-min-content 1fr;
+    -ms-grid-rows: min-content 1fr;
+    grid-template-rows: -webkit-min-content 1fr;
+    grid-template-rows: min-content 1fr;
     row-gap: 30px;
     -webkit-column-gap: 16.6%;
     -moz-column-gap: 16.6%;
@@ -2010,12 +2039,17 @@ button,
   .footer__social-list {
     margin: 10px 0 0 0;
     gap: 25px;
+    max-width: 420px;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
   }
 
   .footer__inner {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    max-width: 100%;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -2068,6 +2102,7 @@ button,
   .nav h3 {
     margin: 0;
     padding: 22px 0;
+    height: 58px;
   }
 
   .nav__wrapper {
@@ -2223,7 +2258,7 @@ button,
   }
 
   .feedback__container {
-    padding: 49px 25px 86px;
+    padding: 49px 25px 80px;
   }
 
   .feedback h2 {
@@ -2261,12 +2296,12 @@ button,
   }
 
   .feedback__checkbox label::before {
-    top: 37%;
+    top: 23%;
     left: 5px;
   }
 
   .feedback__checkbox label {
-    padding-left: 30px;
+    padding: 2px 8px 10px 30px;
   }
 
   .footer__container {
@@ -2358,7 +2393,7 @@ button,
     top: 0;
     left: 0;
     width: 100%;
-    height: 61px;
+    height: 58px;
     border: none;
     background: transparent;
   }

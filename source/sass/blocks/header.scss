@@ -11,6 +11,7 @@
   }
 
   @include vp-1023 {
+    position: relative;
     min-height: 100px;
   }
 
@@ -55,7 +56,7 @@
 
 .header__contacts {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   flex-wrap: wrap;
   column-gap: 20.4%;
   row-gap: 10px;
@@ -117,14 +118,15 @@
 
 .header__link-btn {
   font-size: 14px;
+  margin-bottom: 5px;
   line-height: 16px;
-  padding: 4px 15px 9px;
+  padding: 10px 15px;
   background-color: transparent;
   min-width: 160px;
-  min-height: 40px;
   margin-right: 61px;
   color: $color-alice-blue;
   border: 1px solid $color-alice-blue;
+  max-width: 200px;
 
   @include vp-1023 {
     display: none;

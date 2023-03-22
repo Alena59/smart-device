@@ -10,7 +10,7 @@
 .feedback__container {
   display: flex;
   justify-content: flex-end;
-  padding: 165px 50px 250px;
+  padding: 165px 50px 248px;
   background: url("../img/paper-airplane.png") no-repeat 6.3% 44.3%;
 
   @include vp-1220 {
@@ -29,15 +29,14 @@
     background-size: 32%;
   }
 
-
   @include vp-1023 {
-    padding: 46px 50px 128px 50px;
+    padding: 46px 50px 122px 50px;
     background: none;
     display: block;
   }
 
   @include vp-767 {
-    padding: 49px 25px 86px;
+    padding: 49px 25px 80px;
   }
 }
 
@@ -76,6 +75,7 @@
   line-height: 22px;
   color: $color-default-white;
   padding: 15px;
+  background: transparent;
 
   transition: opacity $trans-default;
 
@@ -178,8 +178,7 @@
   font-family: $ff-robotocondensed;
   font-weight: 700;
   line-height: 19px;
-  min-height: 45px;
-  padding-bottom: 10px;
+  padding: 15px 25px;
   order: -1;
   background: $color-black-pearl-2;
 }
@@ -224,13 +223,17 @@
     top: 39%;
 
     @include vp-767 {
-      top: 37%;
+      top: 23%;
       left: 5px;
     }
   }
 
+  @include vp-1023 {
+    padding: 10px 8px 5px 25px;
+  }
+
   @include vp-767 {
-    padding-left: 30px;
+    padding: 2px 8px 10px 30px;
   }
 
   @include hover {

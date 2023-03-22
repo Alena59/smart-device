@@ -1,10 +1,11 @@
 .footer {
   background: $color-black-pearl;
   color: $color-default-white;
+  margin-top: auto;
 }
 
 .footer__container {
-  padding: 52px 50px 55px;
+  padding: 49px 50px 55px;
   display: flex;
   justify-content: space-between;
   column-gap: 3%;
@@ -12,7 +13,7 @@
   @include vp-1023 {
     display: grid;
     grid-template-columns: 240px 1fr;
-    grid-template-rows: 55px 1fr;
+    grid-template-rows: min-content 1fr;
     row-gap: 30px;
     column-gap: 16.6%;
     padding: 50px 50px 75px;
@@ -54,6 +55,8 @@
   @include vp-1023 {
     margin: 10px 0 0 0;
     gap: 25px;
+    max-width: 420px;
+    justify-content: flex-end;
   }
 
   @include vp-767 {
@@ -64,10 +67,11 @@
 }
 
 .footer__inner {
-  margin-right: 30px;
+  min-width: 250px;
 
   @include vp-1023 {
     display: flex;
+    max-width: 100%;
     justify-content: space-between;
     grid-column: 1/3;
     margin-right: 0;

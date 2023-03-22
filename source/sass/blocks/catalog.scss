@@ -33,9 +33,14 @@
   }
 }
 
+.catalog__item {
+  display: flex;
+  flex-grow: 1;
+}
+
 .catalog__item a {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
   width: 100%;
   min-height: 650px;
   padding: 50px 40px;

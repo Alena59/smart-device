@@ -3,10 +3,9 @@ const modalContainer = document.querySelector('[data-modal="feedback"]');
 const closeModalBtn = document.querySelector('[data-modal="close-modal"]');
 const userName = document.getElementById('modal-input-name');
 const body = document.getElementById('body');
-const wrapper = document.getElementById('wrapper');
 
-const INTERACTIVE_ELEMENTS = ['button', 'a', 'input', 'textarea', '[tabindex]'];
-const interactiveElementsArr = wrapper.querySelectorAll(INTERACTIVE_ELEMENTS);
+let lastFocus;
+lastFocus = document.activeElement;
 
 function openModal() {
   if (openModalBtn && modalContainer && body && userName) {
@@ -14,11 +13,9 @@ function openModal() {
       e.stopPropagation();
       e.preventDefault();
       modalContainer.classList.toggle('is-closed');
-      setTimeout(userName.focus(), 2000);
       body.style.overflow = 'hidden';
-      interactiveElementsArr.forEach((element) => {
-        element.setAttribute('tabindex', '-1');
-      });
+      modalContainer.setAttribute('tabindex', '0');
+      userName.focus();
     });
   }
 }
@@ -26,17 +23,37 @@ function openModal() {
 function prepareClosingModal() {
   modalContainer.classList.toggle('is-closed');
   body.style.overflow = 'scroll';
-  interactiveElementsArr.forEach((element) => {
-    element.setAttribute('tabindex', '1');
-  });
 }
 
 function closeModal() {
-  if (modalContainer && closeModalBtn) {
+  if (modalContainer) {
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') {
         prepareClosingModal();
         modalContainer.classList.add('is-closed');
+        lastFocus.focus();
+      }
+    });
+
+    modalContainer.addEventListener('keydown', function (e) {
+      if (e.keyCode === 9) {
+        let focusable = document.querySelector('[data-modal="feedback"]').querySelectorAll('input,textarea, button');
+        if (focusable.length) {
+          let first = focusable[0];
+          let last = focusable[focusable.length - 1];
+          let shift = e.shiftKey;
+          if (shift) {
+            if (e.target === first) {
+              last.focus();
+              e.preventDefault();
+            }
+          } else {
+            if (e.target === last) {
+              first.focus();
+              e.preventDefault();
+            }
+          }
+        }
       }
     });
 
@@ -47,5 +64,16 @@ function closeModal() {
     });
   }
 }
+
+function focusRestrict() {
+  document.addEventListener('focus', function (e) {
+    if (openModalBtn && !modalContainer.contains(e.target)) {
+      e.stopPropagation();
+      modalContainer.focus();
+    }
+  }, true);
+}
+
+focusRestrict();
 
 export {openModal, closeModal};

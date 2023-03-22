@@ -6,14 +6,13 @@
   padding: 15px;
   border-radius: 3px;
   letter-spacing: 0.05em;
-  align-self: center;
   justify-content: center;
-  align-items: center;
   text-transform: uppercase;
   color: $color-default-white;
   background-color: $color-neon-blue;
   border: none;
   cursor: pointer;
+  user-select: none;
   transition: opacity $trans-default;
 
   &:disabled {

@@ -5,7 +5,7 @@ import {initScroll} from './modules/scroll';
 import {toggleContent} from './modules/toggle-content';
 import {openModal, closeModal} from './modules/modals/modal';
 import {initPhoneMask} from './modules/mask';
-import {validateForm} from './modules/validation';
+// import {validateForm} from './modules/validation';
 
 // ---------------------------------
 
@@ -28,8 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
     openModal();
     closeModal();
     initPhoneMask();
-    validateForm();
-    initPhoneMask();
+    // validateForm();
   });
 });
 

@@ -37,7 +37,7 @@ function closeModal() {
 
     modalContainer.addEventListener('keydown', function (e) {
       if (e.keyCode === 9) {
-        let focusable = document.querySelector('[data-modal="feedback"]').querySelectorAll('input,textarea, button');
+        let focusable = modalContainer.querySelectorAll('input,textarea, button');
         if (focusable.length) {
           let first = focusable[0];
           let last = focusable[focusable.length - 1];

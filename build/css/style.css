@@ -1598,6 +1598,7 @@ button,
 
 .footer__inner {
   max-width: 250px;
+  margin-right: 30px;
 }
 
 .footer__nav {

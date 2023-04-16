@@ -10,6 +10,7 @@
     "Firefox ESR"
   ],
   "scripts": {
+    "prodeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
